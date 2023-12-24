@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "AlertifyJS@1.13.1",
+      "destination": "wwwroot/AlertifyJS/"
+    }
+  ]
+}

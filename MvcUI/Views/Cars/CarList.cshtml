@@ -1,0 +1,41 @@
+﻿@using Entities.Dtos
+@model List<CarDetailListDto>
+<div class="row">
+    <div class="col-3">
+        <form>
+
+        </form>
+    </div>
+    <div class="col-9">
+        <h3>Arabalar</h3>
+        <div class="row">
+            @foreach (var car in @Model)
+            {
+                <div class="col-md-4">
+                    <a href="" style="text-decoration: none;">
+                        <div class="shadow p-4" style="width: 18rem;">
+
+                            <img src="@car.MainImage" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex  justify-content-between">
+                                    <h5 class="card-title">@car.BrandName</h5>
+
+                                </div>
+                                <span class="badge rounded-pill text-bg-secondary">1998</span>
+                                <span class="badge rounded-pill text-bg-secondary">Seat</span>
+                                <p class="card-text  text-muted">  Konforun yeni modeli audi a3 ile tatil keyfi <br> </p>
+                                <h4 class="text-muted text-end">@car.DailyPrice</h4>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Detaylar</button>
+                                    <button class="btn btn-success" type="button">Kirala</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

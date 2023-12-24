@@ -1,0 +1,142 @@
+﻿
+@model Entities.Dtos.RegisterDto
+@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashtreme Admin - Free Dashboard for Bootstrap 4 by Codervent</title>
+    <!-- loader-->
+    <link href="~/dashtreme-master/assets/css/pace.min.css" rel="stylesheet" />
+    <!--favicon-->
+    <link rel="icon" href="~/dashtreme-master/assets/images/favicon.ico" type="image/x-icon">
+    <!-- simplebar CSS-->
+    <link href="~/dashtreme-master/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS-->
+    <link href="~/dashtreme-master/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animate CSS-->
+    <!-- Icons CSS-->
+    <link href="~/dashtreme-master/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- Sidebar CSS-->
+    <!-- Custom Style-->
+    <link href="~/dashtreme-master/assets/css/app-style.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="bg-theme bg-theme1">
+
+    <!-- start loader -->
+    <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner"><div class="loader"></div></div></div></div>
+    <!-- end loader -->
+    <!-- Start wrapper-->
+    <div id="wrapper">
+
+        <!--Start sidebar-wrapper-->
+        <!--End sidebar-wrapper-->
+        <!--Start topbar header-->
+        <!--End topbar header-->
+        <div class="clearfix"></div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="row mt-3">
+
+
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Round Vertical Form</div>
+                                <hr>
+                                <form asp-action="Register" asp-controller="Accounts" method="post">
+                                    <div class="form-group">
+
+                                        <label asp-for="UserName" for="input-6">Name</label>
+                                        <input asp-for="UserName"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="UserName"></span>
+                                    </div>
+                                    <  <div class="form-group">
+
+                                        <label asp-for="IdentityNumber" for="input-6">Name</label>
+                                        <input asp-for="IdentityNumber"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="IdentityNumber"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="FirstName" for="input-6">Name</label>
+                                        <input asp-for="FirstName"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="FirstName"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="LastName" for="input-6">Name</label>
+                                        <input asp-for="LastName"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="LastName"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="Mail" for="input-6">Name</label>
+                                        <input asp-for="Mail"  type="text" class="form-control " id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="Mail"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="BirthDate" for="input-6">Name</label>
+                                        <input asp-for="BirthDate"  type="date" class="form-control form-control-rounded" />
+                                        <span  asp-validation-for="BirthDate"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="Gender" for="input-6">Name</label>
+                                        <input asp-for="Gender"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="Gender"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="Password" for="input-6">Name</label>
+                                        <input asp-for="Password"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="Password"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label asp-for="PasswordConfirm" for="input-6">Name</label>
+                                        <input asp-for="PasswordConfirm"  type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">
+                                        <span  asp-validation-for="PasswordConfirm"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-light btn-round px-5"><i class="icon-lock"></i> Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div><!--End Row-->
+                <!--start overlay-->
+                <div class="overlay toggle-menu"></div>
+                <!--end overlay-->
+
+            </div>
+            <!-- End container-fluid-->
+
+        </div><!--End content-wrapper-->
+        <!--Start Back To Top Button-->
+        <!--end color switcher-->
+
+    </div><!--End wrapper-->
+    <!-- Bootstrap core JavaScript-->
+  
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+</body>
+</html>

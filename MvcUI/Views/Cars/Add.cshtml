@@ -1,0 +1,259 @@
+﻿@using Entities.Dtos
+@model CarAddDto
+<h1 class="text-center"> Araba Ekleme</h1>
+<div class="container">
+    
+    <form asp-action="Add" class="row g-3" enctype="multipart/form-data">
+
+        <div class="col-md-6">
+            <label for="brand"  class="form-label">Marka</label>
+            <select  asp-for="@Model.BrandId" id="marka" class="form-select">
+                <option selected>Markayı Seçiniz</option>
+                  
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="inputState" class="form-label">Model</label>
+            <select asp-for="CarModelId" id="carmodel" class="form-select">
+
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="inputState" class="form-label">Renk</label>
+            <select asp-for="ColorId" id="colors" class="form-select">
+                <option selected>Choose...</option>
+            </select>
+
+        </div>
+        <div class="col-6">
+            <label for="inputState" class="form-label">Tip</label>
+            <select asp-for="CarTypeId" id="carTypes" class="form-select">
+                <
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="inputState" class="form-label">Vites</label>
+            <select asp-for="TransmissionTypeId" id="transmission" class="form-select">
+              
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="inputState" class="form-label">Yakıt Tipi</label>
+            <select asp-for="FuelTypeId" id="fuelTypes" class="form-control">
+               
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Model Yılı </label>
+            <input asp-for="ModelYear" class="form-control" id="inputZip">
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Şase No </label>
+            <input asp-for="ChassisNumber" class="form-control" >
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Plaka </label>
+            <input asp-for="Plate" class="form-control" id="inputZip">
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Ücret </label>
+            <input asp-for="DailyPrice"  class="form-control" id="inputZip">
+        </div>
+       
+        <div class="col-md-6">
+
+            <div class="input-group mb-3">
+                
+                <label class="input-group-text" for="inputGroupFile01">Resimler</label>
+                <input asp-for="CarImages" id="images" multiple class="form-control" >
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+  <div asp-validation-summary="All"></div>
+ 
+</div>  
+
+                    
+                    
+                    
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+       
+           $.ajax({
+                    contentType: "application/json",
+                    dataType: "json",
+                    type: "Get",
+                    url: "/brands/getall",
+                    success: function (data) {
+                        let brands=jQuery.parseJSON(data);
+                        console.log(brands);
+                        let options="<option value=0>Marka Seçiniz</option>";
+                        $.each(brands,(index,value)=>{
+                         options+=`<option value='${value.Id}'>${value.Name}</option>`;
+                        });
+                        
+                        $("#marka").html(options);
+             }
+            });
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/fuelTypes/getall",
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    console.log(brands);
+                    let options = "<option value=0>Yakıt Tipi Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#fuelTypes").html(options);
+                }
+        });
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/carTypes/getall",
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    console.log(brands);
+                    let options = "<option value=0>Araba Tipi Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#carTypes").html(options);
+                }
+            });
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/colors/getall",
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    console.log(brands);
+                    let options = "<option value=0>Renk Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#colors").html(options);
+                }
+            });
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/currencies/getall",
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    console.log(brands);
+                    let options = "<option value=0>Yakıt Tipi Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#currencies").html(options);
+                }
+            });
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/transmissionTypes/getall",
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    console.log(brands);
+                    let options = "<option value=0>Vites Tipi Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#transmission").html(options);
+                }
+            });
+
+        });
+
+        $("#marka").on('change', function (e) {
+            console.log(e);
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                data: {
+                    brandId: e.target.value
+                },
+                url: `/carmodels/getcarmodels`,
+                success: function (data) {
+                    let brands = jQuery.parseJSON(data);
+                    let options = "<option value=0>Model Seçiniz</option>";
+                    $.each(brands, (index, value) => {
+                        options += `<option value='${value.Id}'>${value.Name}</option>`;
+                    });
+
+                    $("#carmodel").html(options);
+                }
+            });
+        });
+        
+        
+
+        //$('form').on('submit', function (ev) {
+
+        //    ev.preventDefault();
+            
+        //    //var fileSelect=$("")
+        //    //var files = fileSelect.files;
+            
+        //    //var formData = new FormData();
+        //    //for (var i = 0; i < files.length; i++) {
+        //    //    var file = files[i];
+
+        //    //    // Check the file type.
+        //    //    if (!file.type.match('image.*')) {
+        //    //        continue;
+        //    //    }
+
+        //    //    // Add the file to the request.
+        //    //    formData.append('photos[]', file, file.name);
+        //    //}
+        //    //console.log(formData);
+        //    //console.log($("#images"));
+        //    let carToAdd = {
+        //        BrandId:$('#marka').val(),
+        //        CarImages:formData,
+        //    };
+        //    console.log(carToAdd);
+      
+        //    $.ajax({
+               
+        //        type: "Post",
+        //        data: carToAdd,
+        //        url: `/cars/addcar`,
+
+        //        success: function (data) {
+        //            alertify.success(data);
+
+        //            setTimeout(function () { window.location.href = "/cars/carlist" }, 1500);
+
+        //        },
+        //        error:function(error){
+        //            console.log(error); 
+        //             alertify.error(error.responseText);    
+        //        }
+        //    });
+        //});
+</script>
+}
+            

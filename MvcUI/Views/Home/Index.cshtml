@@ -1,0 +1,245 @@
+﻿<div style="width: 100% ;display:block; " id="carouselExample" class=" carousel slide w-100 ">
+    <div class="container">
+
+
+        <div class="carousel-inner">
+            <div class="row">
+                <div class="col-md-5   d-flex flex-column justify-content-center">
+                    <h2 class="text-primary"> Araba Kiralamanın Yeni Adresi </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium atque ad assumenda ratione veritatis,
+                        officiis, porro nobis, suscipit cumque nulla ab consectetur natus reiciendis laudantium ipsam minus. Id,
+                        libero aut! ->
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <div class="carousel-item active"
+                         style="margin-top: 50px; height: 55vh; background-image: url('https://res.cloudinary.com/dmwxehwdz/image/upload/v1703287011/kbzeqdcchrvt23f2flr4.png') ;background-repeat: no-repeat; background-size: 70% 70% ; background-repeat: no-repeat; background-position-x:right ; ">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="height:  55vh;">
+                <img src="images/sad.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" style="height: 45vh;">
+                <img src="images/hero_3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+
+        <div class="bg-light col-12 col-xl-8 rounded-1 shadow my-2 my-xl-0 p-3 ps-4">
+            <form class="row">
+                <div class="col-md form-group">
+                    <label for="pick-up-date-input" class="form-label text-dark">Pick-up Location:</label>
+                    <select class="form-select">
+                        <option selected>Choose a location</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-md form-group">
+                    <label for="pick-up-date-input" class="form-label text-dark">Pick-up Date:</label>
+                    <input class="form-control"
+                           type="datetime-local"
+                           [value]="DateTimeNow | date: 'yyyy-MM-ddThh:mm'"
+                           id="pick-up-date-input" />
+                </div>
+                <div class="col-md form-group">
+                    <label for="return-date-input" class="form-label text-dark">Return Date:</label>
+                    <input class="form-control"
+                           type="datetime-local"
+                           [value]="DateTimeNow | date: 'yyyy-MM-ddThh:mm'"
+                           id="return-date-input" />
+                </div>
+                <button class="col-lg btn btn-primary rounded-3 mt-3 p-3 m-lg-0 p-lg-0">
+                    Search
+                </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center"> <i class="fa-solid fa-car text-primary"></i></h3>
+                    <h4 class="text-center">Selam</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur ut at sit odio distinctio,
+                        quibusdam
+                        autem repellat quidem quasi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+    <p class="position-relative end-0">
+        <a class="btn btn-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+           aria-controls="collapseExample">
+            <i class="fa-solid fa-filter"></i>
+        </a>
+
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user
+            activates the relevant trigger.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/car-rent-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW İ5</h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="" style="text-decoration: none;">
+                <div class="card border-0 shadow overflow-hidden" style="width: 18rem;">
+                    <img src="images/car-rent-2.png " class="card-img-top " style="background-color: #e3f2fd;" alt="...">
+                    <div class="card-body">
+                        <h5 class="" style="text-decoration: none;">BMW İ5</h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/car-rent-3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-decoration: none;">BMW İ5</h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="" style="text-decoration: none;">
+                <div class="shadow p-4" style="width: 18rem;">
+
+                    <img src="images/car-rent-6.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="d-flex  justify-content-between">
+                            <h5 class="card-title">BMW İ5</h5>
+
+                        </div>
+                        <span class="badge rounded-pill text-bg-secondary">1998</span>
+                        <span class="badge rounded-pill text-bg-secondary">Seat</span>
+                        <p class="card-text  text-muted">  Konforun yeni modeli audi a3 ile tatil keyfi <br> </p>
+                        <h4 class="text-muted text-end">500$</h4>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Detaylar</button>
+                            <button class="btn btn-success" type="button">Kirala</button>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<ul class="list-inline">
+    <li class="list-inline-item">This is a list item.</li>
+    <li class="list-inline-item">And another one.</li>
+    <li class="list-inline-item">But they're displayed inline.</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="shadow ">
+                <img src="/images/person_2.jpg" height="150" class="rounded-circle" alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="shadow p-3">
+                <div class="row">
+                    <div class="col">
+                        <img src="/images/person_2.jpg" height="150" class="rounded-circle" alt="">
+                        <div class="text-center">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h4>James Metgir</h4>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto non totam aperiam, doloremque officiis cumque sapiente quis modi cum.
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="shadow ">
+                <img src="/images/person_2.jpg" height="150" class="rounded-circle" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+
+        <div class="card bg-light rounded-2 shadow overflow-hidden">
+          <div class="card-img d-flex justify-content-center align-items-center cursor-pointer">
+            <img src="images/car  " class="card-img-top" height="150 " />
+          </div>
+          <div class="card-body">
+            <span class="model-year border border-secondary text-muted rounded-1 px-3 fw-light">
+              1988
+            </span>
+            <h5 class="card-title">
+              BMW İ5
+            </h5>
+            <p class="mt-1 card-text text-primary fs-3">${{ carDetail.dailyPrice }}</p>
+            <button class="btn btn-primary w-100">
+              Rent Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
